@@ -10,3 +10,8 @@ Lesson 4:
     heading[0]  <--unwrapped 
     heading[0].aninmate({left: 20}); <-- doesn't work because it's unwrapped 
 -jQuery comes back as an array 
+
+
+$(document).redy(function(){
+    alert("jquery loaded");
+});
