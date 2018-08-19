@@ -15,3 +15,15 @@ Lesson 4:
 $(document).redy(function(){
     alert("jquery loaded");
 });
+
+Lesson 6: Adding filters to jQuery to select specific elements and refining selectors \
+example: $("header nav li: first").css({border: "2px solid red"});
+
+The DOM in Javascript 
+a way to describe the relationship between elements on a page, and gives us a way to traverse them. 
+
+HTML
+BODY 
+HEADER, DIV FOOTER 
+HI 
+ex: document.getElementsByTagName("header").getElementsByTagName("h1")
