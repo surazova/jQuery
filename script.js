@@ -1,18 +1,21 @@
 /* global $ */
-//$("h3").css({border: "3px solid blue"});
+//lesson 7 
 
-//$(".wrapper").css({border: "3px solid red"});
+//next
+$("#contact-methods").next().css({border: "3px solid red"});
 
-//$("#clients").css({border: "3px solid yellow"});
+//previous
+$("#social-nav").prev().css({border: "3px solid blue"}); //Makes the map image border blue 
 
-$("#contact ul:first").css({border: "2px solid red"});
+//parent
+$(".banner-title").parent().css({border: "3px solid pink"}); //Grabs and element and grabs its parent
+                                                            //You can add "parents" to make it plural and affect all the parents of that element
 
-$("#contact ul:last").css({border: "2px solid red"});
+//children
+$("#social-nav").children().css({border: "3px solid green"});
 
-$("header nav li:even").css({border: "2px solid blue"});
-$("header nav li:odd").css({border: "2px solid yellow"});
-$("section:not('#contact')").css({border: "2px solid green"}); //grabbing everything that is not the #contact 
-$("#social-nav li:lt(3)").css({border: "2px solid blue"}); //Less than 
-$("#social-nav li:gt(3)").css({border: "2px solid blue"}); //Greater than 
-$("div[class]").css({border: "2px solid pink"}); //Any div with the class attribute will be solid pink 
-$("img[alt quote]").css({border: "2px solid pink"});  //Check the jQuery selectors for more https://www.youtube.com/redirect?q=https%3A%2F%2Fapi.jquery.com%2Fcategory%2Fselectors%2F&v=jiOZCNY4gQM&redir_token=zxojA54H2FhBKbhceOp8p0yAHtt8MTUzNDc5NTI4N0AxNTM0NzA4ODg3&event=video_description
+//find 
+$("#contact").find(".facebook").css({border: "3px solid purple"}); //if facebook exists there, bring it 
+
+//closest
+$("#social-nav").closest(".wrapper").css({border: "3px solid orange"});
