@@ -1,23 +1,35 @@
 /* global $ */
-//Lesson 9: Adding content 
+//Lesson 10: Wrap and Unwrap elements using jQuery
 
-var tweet = "<div style='margin: 20px 0; padding: 10px; background: #eee'>The big fight live: Ham vs Cheese! </div>";
-
-//Adding and Changing Content
-
-    //$("#tweets div").append(tweet)
-    //$("#tweets div").prepend(tweet)
-    //$("#tweets div p").before(tweet);
-    //$("#tweets div p").after(tweet);
-    //$("#tweets div").html(tweet);
-    //$("#tweets div p").text(tweet);
+//$("section").wrap("<div>");
+//$("section").unwrap();
+//$("section").wrapAll("<div>");
 
 
 /*
-.append() adds content to the bottom of the element 
-.prepend() adds content to the top of the element 
-.before() adds content before element 
-.after() adds content after element 
-.html() changes the whole html of the element 
-.text() changes the text of an element 
+wrap() - wraps all matched elements individually 
+unwrap() - unwraps all matched elements 
+wrapAll() - wraps all elements combined with 1 single element 
 */
+
+//Examples 
+
+var wrapper = "<div class='wrapper'>";
+var button = $(".button");
+var wrapped = true;
+
+//Vanilla JS
+button[0].onclick = function() {
+    
+    if(wrapped){
+        $("section").unwrap();
+        wrapped = false; 
+        button.text("Wrap");
+    } else {
+        $("section").wrapAll(wrapper);
+        wrapped = true;
+        button.text("Unwrap");
+    }
+};
+
+//You can use this to make a video full screen on your website. 
