@@ -1,13 +1,23 @@
 /* global $ */
-//Lesson 13: Controlling CSS
+//Lesson 14: Working with Classes 
 
-console.log($("#social-nav").css("position")); //checks the value of a certain property already given to that element 
-$("#social-nav").css("top", "200px").css("left", "100px"); //Chaining the values, but it gets messy. Another method is to pass an object 
 
-$("#social-nav").css({
-    "top" : "-400px",
-    "left" : "150px",
-    "opacity" : "0.5",
-    "border-top" : "4px solid red"
-});
+$("header .wrapper").removeClass("wrapper");
+$("header > div").addClass("wrapper"); //> means directly under, the direct child under the header 
 
+
+//Use Vanilla JS to toggle the button to open and close 
+var button = $("#lead-banner a"); 
+
+button[0].onclick = function() {
+  $("#points-of-sale").toggleClass("open");
+  return false; 
+    
+};
+
+/* 
+
+removeClass() - remves a class from the matched elements
+addClass() - adds a class to the matched elements 
+toggleClass - toggles the class on and off on their matched elements 
+*/
