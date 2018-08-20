@@ -1,15 +1,13 @@
 /* global $ */
-//Lesson 11: Removing Content
+//Lesson 12: Changing Atributes
 
-$(".button").empty();
-$("#points-of-sale").empty();
-$(".button").remove();
-$("#contact img").remove();
-
+$("#contact img").removeAttr("alt");
+$("#contact img").attr("alt", "location"); //sets the attribute 
+console.log($("#contact img").alt("alt")); //Reads the attribute 
 
 /*
 
-.empty() - empties the inner HTML of an element 
-.remove() - removes the element completely
+.removeAttr() - removes an attibute completely 
+.attr() - can read or set any attribute 
 
 */
