@@ -1,20 +1,30 @@
 
 /* global $ */
-//Lesson 21: Show, Hide, and Toggle 
+//Lesson 22: Sliding Elements 
 
-
-//Hides and shows the section/button based on the time parameter that you set 
-$(document).ready(function(){
-    $("section > h2").on("click", function() {
+$(document).ready(function() {
+    
+    $(".slide-button-up").on("click", function() {
         
-        $(this).hide(1000).show(1000);
+        $("#lead-banner").slideup(100);
     });
+    $(document).ready(function() {
+    
+    $(".slide-button-up").on("click", function() {
+        
+        $("#lead-banner").slidedown(4000, function() {
+            alert("animation complete");
+        });
+    });
+
 });
 
-//A more specific method is below. Does the show and hide functionality, depending on the state that it is in
-$(document).ready(function(){
-    $("img[alt-map]").on("click", function() {
+//Slide toggle is also a way that we can do this 
+$(document).ready(function() {
+    
+    $(".slide-button-up").on("click", function() {
         
-        $("section > h2").toggle(1000);
+        $("#lead-banner").slideToggle(1000, function() {
+            alert("animation complete");
+        });
     });
-});
