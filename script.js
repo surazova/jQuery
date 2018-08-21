@@ -1,19 +1,34 @@
 /* global $ */
-//Lesson 19: jQuery Animations 
+//Lesson 20: Fading Elements in and out 
 
-
-//We can only animate properties that have a numerical value 
-//We can't change the font color, etc. 
-$(document).ready(function() {
+$(document).ready(function(){
     
-    function complete() {
-        alert("Animation Complete");
-    }
-    $("section > h2").on("click", function(){
-      
-      $(this).animate({"width" : "500px", "height" : "100px"}, 100, "linear", complete); //the 100 is the second parameter, tells you how fast to animate something. The third parameter, linear sets the swing of the animation. The fourth is a c
-      //callback function, that fires when something is complete. 
+    $("section > h2").on("click", function() {
+        
+        $(this).animate({"opacity" : "0.5"});
     });
 });
 
-//Might be useful if you have a shopping website, you can animate the object to the cart and give an alert that the item was added 
+//The above method works, but ther eis a better one. 
+$(document).ready(function(){
+    
+    $("section > h2").on("click", function() {
+        
+        $(this).fadeOut(2000).fadeIn(500);
+    });
+});
+
+//A more specific way below: 
+$(document).ready(function(){
+    
+    $("section > h2").on("click", function() {
+        
+        $(this).fadeTo(200, 0.2)
+                .fadeTo(200, 0.8) //time and opacity, a value between 0 and 1
+                .fadeTo(200, 0.8)
+                .fadeTo(200, 0.8)
+                .fadeTo(200, 0.8);
+        
+        
+    });
+});
