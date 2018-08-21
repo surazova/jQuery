@@ -1,31 +1,8 @@
 
 /* global $ */
-//Lesson 25: What's Next?
+//Lesson 25: Using Plugins 
+//Plugin: a piece of code that someone else has written that we can use the extend the functionality of jQuery 
 
 $(document).ready(function() {
-
-    
+    $(".rslides").responsiveslides();
 });    
-
-/*
-jQuery UI
--Helps us to easily make improvements to user interactions, great for desktop and mobile apps and websites 
-
--datapickers
--draggalbe elements 
--sortable elements 
--resizable elements 
-
--sliders
--tooltops
--expandable lists 
--image galleries 
-
-jQuery with AJAX
--Communicate with a server and load data onto a page without refreshing 
--google maps 
--traffic updates 
-
--Other jQuery plugins 
-
-*/
