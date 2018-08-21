@@ -1,34 +1,19 @@
 /* global $ */
-//Lesson 20: Fading Elements in and out 
+//Lesson 21: Show, Hide, and Toggle 
 
+
+//Hides and shows the section/button based on the time parameter that you set 
 $(document).ready(function(){
-    
     $("section > h2").on("click", function() {
         
-        $(this).animate({"opacity" : "0.5"});
+        $(this).hide(1000).show(1000);
     });
 });
 
-//The above method works, but ther eis a better one. 
+//A more specific method is below. Does the show and hide functionality, depending on the state that it is in
 $(document).ready(function(){
-    
-    $("section > h2").on("click", function() {
+    $("img[alt-map]").on("click", function() {
         
-        $(this).fadeOut(2000).fadeIn(500);
-    });
-});
-
-//A more specific way below: 
-$(document).ready(function(){
-    
-    $("section > h2").on("click", function() {
-        
-        $(this).fadeTo(200, 0.2)
-                .fadeTo(200, 0.8) //time and opacity, a value between 0 and 1
-                .fadeTo(200, 0.8)
-                .fadeTo(200, 0.8)
-                .fadeTo(200, 0.8);
-        
-        
+        $("section > h2").toggle(1000);
     });
 });
