@@ -1,20 +1,17 @@
 /* global $ */
-//Lesson 16: Event Helpers 
+//Lesson 17: Document ready and window load events 
 
-
-//Double click, the same way of saying .on (better to use .om for performance)
-$("#lead-banner").dblclick(function(){
-  alert("you clicked me");  
+//When you must place your script tags in the front set this: 
+$(document).on("ready", function() {   //When the document is ready, then fire or bind your events 
+    
 });
 
-//Another method 
-$("#lead-banner").dblclick(function(){
-    alert("you clicked me");
-    $("#lead banner").off("dblclick");
+//or you can use
+$(function(){
+    
 });
-/* 
 
-on() - binds an event to matched elements 
-off() - unbinds event from matched elements 
-
-*/
+//or
+$(window).on("load", function(){ //Once everything has fully loaded on the page, then fire up the code
+    
+});
