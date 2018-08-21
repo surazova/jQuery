@@ -1,30 +1,29 @@
 
 /* global $ */
-//Lesson 22: Sliding Elements 
+//Lesson 23: Animation Example 1: Quote Fader 
 
 $(document).ready(function() {
     
-    $(".slide-button-up").on("click", function() {
-        
-        $("#lead-banner").slideup(100);
-    });
-    $(document).ready(function() {
+    var allQuotes = $("blockquote");
+    var currentQuote = 0;
     
-    $(".slide-button-up").on("click", function() {
+    function changeQuote() {
         
-        $("#lead-banner").slidedown(4000, function() {
-            alert("animation complete");
-        });
+        $(allQuotes[currentQuote]).fadeOut(200, function() {
+            
+      
+        
+        if(currentQuote == allQuotes.length - 1) {
+            currentQuote = 0;
+        } else {
+            currentQuote++;
+        }
+        
+        $(allQuotes[currentQuote]).fadeIn(200);
     });
-
+    }
+    
+    var quoteTimer = setInterval(changeQuote, 3000); //You need to call the function 
 });
 
-//Slide toggle is also a way that we can do this 
-$(document).ready(function() {
-    
-    $(".slide-button-up").on("click", function() {
-        
-        $("#lead-banner").slideToggle(1000, function() {
-            alert("animation complete");
-        });
-    });
+//If the quote is set to 2, then reset it back to the first one, 0 
