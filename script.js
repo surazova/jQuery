@@ -1,13 +1,8 @@
 
 /* global $ */
-//Lesson 24: Sliding Animation Example
+//Lesson 25: Using Plugins 
+//Plugin: a piece of code that someone else has written that we can use the extend the functionality of jQuery 
 
 $(document).ready(function() {
-    
-    var items = $("#points of sale li");
-    
-    items.on("click", function() {
-        $(this).find("p").slideToggle(500);
-    });
-});
- 
+    $(".rslides").responsiveslides();
+});    
